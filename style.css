@@ -1,0 +1,432 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.header {
+  background-image: linear-gradient(60deg, black 5%, #22313fcc 70%),
+    url(image/shreya.jpg);
+  height: 120vh;
+  background-attachment:scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.logo {
+  max-width: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-animation{
+  animation-name: floating;
+  animation-iteration-count: infinite;
+  width: 20px;
+  height: 30px;
+  border-bottom: 10px solid white;
+  border-top: 10px solid white
+}
+
+.e{
+  border-right: 10px solid white;
+  border-left: 10px solid white;
+  animation-timing-function:ease-in;
+  animation-duration: 2s;
+}
+.j{
+  border-right: 10px solid white;
+  animation-timing-function: ease-out;
+  animation-duration: 2s;
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+}
+.header-text {
+  width: 80%;
+  padding: 50px;
+  margin: auto;
+  margin-top: 40vh;
+  margin-bottom: 10vh;
+}
+
+h1#name {
+  font-size: 70px;
+  font-weight: 300;
+  margin: 20px 0 0 -5px;
+  text-transform: uppercase;
+}
+p#description {
+  margin: 10px 0 0 3px;
+  font-size: 25px;
+}
+
+/* Scroll Mouse */
+a span {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-top: -60px;
+}
+a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+
+.scroll-mouse {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Scroll Mouse */
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.btn {
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #fff;
+  margin: 5px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  min-width: 80px;
+  transition: 0.2s all;
+}
+.btn:hover {
+  color: white;
+  background: #3583a7;
+  box-shadow: 0 0 8px 0px white;
+  font-weight: bold;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Footer */
+
+footer{
+background-image: linear-gradient(60deg, black 10%, #22313fcc 80%),
+    url(image/bg2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 50px;
+  
+  color: #5d5d5d;
+  font-size: 20px;
+}
+
+footer h3, h4{
+  color: #c9c9c9;
+}
+
+
+.footer-info-name a{
+  color: #63d488;
+  text-decoration: none;
+} 
+.footer-info-name h3{
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+
+.footer-info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.footer-info-box{
+  width: 30%;
+  border-bottom: 2px solid;
+}
+
+.info-box-title{
+  border-left: 2px solid #63d488;
+  padding: 7px;
+  padding-left: 20px;
+  background: #333131;
+}
+
+ul.footer-list {
+  list-style-type: none;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.footer-list li > a {
+  color: #63d488;
+  text-decoration: none;
+}
+
+.copyright{
+  text-align: center;
+  margin-top: 70px;
+}
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  .logo {
+    
+  }
+  .header-text {
+    width: 70%;
+    padding: 50px;
+    margin: auto;
+    margin-top: 40vh;
+  }
+
+  h1#name {
+    font-size: 70px;
+    font-weight: 300;
+    margin: 20px 0 0 -5px;
+    text-transform: uppercase;
+  }
+  p#description {
+    margin: 10px 0 0 3px;
+    font-size: 25px;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .logo {
+   
+  }
+  .header-text {
+    width: 70%;
+    padding: 50px;
+    margin-top: 40vh;
+  }
+
+  h1#name {
+    font-size: 70px;
+    margin: 20px 0 0 -5px;
+  }
+  p#description {
+    margin: 10px 0 0 3px;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo {
+    
+  }
+  .header-text {
+    width: 70%;
+    padding: 50px;
+    margin-top: 60vh;
+  }
+
+  h1#name {
+    font-size: 60px;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .logo {
+    
+  }
+  .header-text {
+    width: 80%;
+    margin-top: 50vh;
+  }
+
+  h1#name {
+    font-size: 40px;
+    margin: 20px 0 0 -5px;
+  }
+  p#description {
+    margin: 10px 0 0 3px;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .logo {
+    
+  }
+
+  .header-text {
+    width: 90%;
+    padding: 25px;
+    margin-top: 50vh;
+  }
+
+  h1#name {
+    font-size: 39px;
+    font-weight: 300;
+    margin: 15px 0 0 -5px;
+  }
+  p#description {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+  }
+
+  /* Scroll Mouse */
+  a span {
+    width: 20px;
+    height: 35px;
+    margin-left: -10px;
+    margin-top: -40px;
+  }
+  a span::before {
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+  }
+
+  .footer-info-box{
+    width: 100%;
+    border-bottom: 0;
+  }
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 2px 3px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
